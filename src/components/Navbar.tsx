@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
             href="/"
             className="flex items-center group focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-lg p-1"
           >
-            <div className="relative h-10 w-32 sm:w-36">
+            <div className="relative h-14 sm:h-16 w-44 sm:w-52">
               <Image
                 src="/assets/logo.png"
                 alt="Qvantix Software & Digital Solutions"
