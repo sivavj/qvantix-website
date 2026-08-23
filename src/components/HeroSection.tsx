@@ -22,15 +22,15 @@ export const HeroSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-6 text-left">
             
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-700 text-xs font-bold font-mono tracking-wider uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-orange-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#307e3e]/10 border border-[#307e3e]/30 text-[#307e3e] text-xs font-bold font-mono tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-[#f6921e]" />
               <span>{COMPANY_INFO.eyebrow}</span>
             </div>
 
             {/* Benefit Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
               Looking for a reliable software development and digital solutions company in{' '}
-              <span className="text-orange-gradient">Tamil Nadu?</span>
+              <span className="text-brand-gradient">Tamil Nadu?</span>
             </h1>
 
             {/* Supporting Copy */}
@@ -41,19 +41,19 @@ export const HeroSection: React.FC = () => {
             {/* Capability Bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-700 font-semibold">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#307e3e] shrink-0" />
                 <span>Custom Software & Website Development</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#f6921e] shrink-0" />
                 <span>Mobile Apps & Software Testing (QA)</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#307e3e] shrink-0" />
                 <span>AI & Machine Learning Solutions</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#f6921e] shrink-0" />
                 <span>SEO, Google Ads & Digital Marketing</span>
               </div>
             </div>
@@ -62,14 +62,14 @@ export const HeroSection: React.FC = () => {
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold text-white bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 shadow-lg shadow-orange-500/25 transition-all duration-200 focus:ring-2 focus:ring-orange-500"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-bold text-white bg-gradient-to-r from-[#307e3e] to-[#246330] hover:from-[#246330] hover:to-[#1e5229] shadow-lg shadow-[#307e3e]/25 transition-all duration-200 focus:ring-2 focus:ring-[#307e3e]"
               >
                 <span>Start a Conversation</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/solutions"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-300 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-bold text-[#d8790c] bg-white hover:bg-[#f6921e]/10 border-2 border-[#f6921e] shadow-sm transition-all"
               >
                 <span>Explore Solutions</span>
               </Link>
@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
 
             {/* Trust Note */}
             <div className="pt-2 flex items-center gap-2 text-xs text-slate-500 font-medium">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <ShieldCheck className="w-4 h-4 text-[#307e3e]" />
               <span>Engineered for startups, small businesses, and growing companies across Tamil Nadu & beyond.</span>
             </div>
 
@@ -93,7 +93,7 @@ export const HeroSection: React.FC = () => {
                 onClick={() => setActiveView('illustration')}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-bold font-mono transition-all flex items-center gap-1.5 ${
                   activeView === 'illustration'
-                    ? 'bg-white text-orange-600 shadow-sm border border-slate-200'
+                    ? 'bg-[#307e3e] text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -105,7 +105,7 @@ export const HeroSection: React.FC = () => {
                 onClick={() => setActiveView('interactive')}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-bold font-mono transition-all flex items-center gap-1.5 ${
                   activeView === 'interactive'
-                    ? 'bg-white text-orange-600 shadow-sm border border-slate-200'
+                    ? 'bg-[#307e3e] text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -117,7 +117,7 @@ export const HeroSection: React.FC = () => {
             {activeView === 'illustration' ? (
               <div className="relative w-full max-w-lg group">
                 {/* Outer Glow */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#307e3e] to-[#f6921e] rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500" />
                 
                 {/* Main Card */}
                 <div className="relative bg-white border border-slate-200 rounded-2xl p-2.5 shadow-2xl overflow-hidden">
@@ -127,6 +127,7 @@ export const HeroSection: React.FC = () => {
                       alt="Qvantix Digital & Software Solutions 3D Visual Illustration"
                       fill
                       priority
+                      sizes="(max-width: 1024px) 100vw, 512px"
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
@@ -134,14 +135,14 @@ export const HeroSection: React.FC = () => {
                   {/* Overlay Badge */}
                   <div className="p-3 bg-white/90 backdrop-blur-md rounded-xl mt-2 border border-slate-100 flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] font-mono font-bold text-orange-600 uppercase tracking-widest block">
+                      <span className="text-[10px] font-mono font-bold text-[#f6921e] uppercase tracking-widest block">
                         DIGITAL & SOFTWARE SOLUTIONS
                       </span>
                       <span className="text-xs font-extrabold text-slate-900">
                         Tailored Technology Ecosystem
                       </span>
                     </div>
-                    <span className="px-2 py-1 rounded bg-orange-50 text-[10px] font-mono font-bold text-orange-700 border border-orange-200">
+                    <span className="px-2 py-1 rounded bg-[#307e3e]/10 text-[10px] font-mono font-bold text-[#307e3e] border border-[#307e3e]/30">
                       3D ARCHITECTURE
                     </span>
                   </div>

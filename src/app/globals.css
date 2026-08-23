@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-green: #307e3e;
+  --color-brand-green-hover: #246330;
+  --color-brand-orange: #f6921e;
+  --color-brand-orange-hover: #d8790c;
+
+  --color-primary-green: #307e3e;
+  --color-secondary-orange: #f6921e;
+
+  /* Force standard orange scale to match exact secondary logo color #f6921e */
+  --color-orange-50: #fff9f0;
+  --color-orange-100: #feeecb;
+  --color-orange-200: #fcdcae;
+  --color-orange-300: #fac173;
+  --color-orange-400: #f8a841;
+  --color-orange-500: #f6921e;
+  --color-orange-600: #f6921e;
+  --color-orange-700: #d8790c;
+  --color-orange-800: #ab5d0e;
+  --color-orange-900: #8a4b10;
+
+  /* Force standard emerald/green scale to match exact primary logo color #307e3e */
+  --color-emerald-50: #f0f7f1;
+  --color-emerald-100: #dcf0df;
+  --color-emerald-200: #bce2c4;
+  --color-emerald-300: #93ce9f;
+  --color-emerald-400: #5cb26c;
+  --color-emerald-500: #307e3e;
+  --color-emerald-600: #307e3e;
+  --color-emerald-700: #246330;
+  --color-emerald-800: #1e5229;
+  --color-emerald-900: #15371c;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -8,17 +42,17 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 24.6 95% 53.1%; /* Qvantix Orange #F97316 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 131 45% 34%; /* Primary Logo Green #307e3e */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 32 93% 54%; /* Secondary Logo Orange #f6921e */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 32 93% 54%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 24.6 95% 53.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 24.6 95% 53.1%;
+    --ring: 131 45% 34%;
   }
 
   html {
@@ -33,7 +67,7 @@
   }
 }
 
-/* Subtle light tech grid overlay */
+/* Subtle light tech grid & radial brand overlays */
 .bg-tech-grid-light {
   background-size: 32px 32px;
   background-image: 
@@ -42,21 +76,38 @@
 }
 
 .bg-radial-light {
-  background: radial-gradient(circle at 50% 0%, rgba(249, 115, 22, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(48, 126, 62, 0.07) 0%, rgba(246, 146, 30, 0.07) 45%, rgba(255, 255, 255, 0) 80%);
 }
 
-.text-gradient-dark {
-  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+.bg-radial-brand {
+  background: radial-gradient(circle at 50% 50%, rgba(48, 126, 62, 0.09) 0%, rgba(246, 146, 30, 0.09) 55%, rgba(255, 255, 255, 0) 85%);
+}
+
+/* Logo Brand Text Gradients & Solid Helpers */
+.text-brand-gradient {
+  background: linear-gradient(135deg, #307e3e 0%, #f6921e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-orange-gradient {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.text-green-brand {
+  color: #307e3e;
 }
 
+.text-orange-brand {
+  color: #f6921e;
+}
+
+/* Logo Dual Brand Background Gradients */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #307e3e 0%, #f6921e 100%);
+}
+
+.bg-brand-gradient-orange-emerald {
+  background: linear-gradient(135deg, #f6921e 0%, #307e3e 100%);
+}
+
+/* Card Styling */
 .light-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -68,8 +119,8 @@
 }
 
 .light-card-hover:hover {
-  border-color: #f97316;
-  box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border-color: #307e3e;
+  box-shadow: 0 10px 25px -5px rgba(48, 126, 62, 0.12), 0 8px 10px -6px rgba(246, 146, 30, 0.08);
   transform: translateY(-2px);
 }
 
@@ -85,5 +136,5 @@
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #307e3e;
 }

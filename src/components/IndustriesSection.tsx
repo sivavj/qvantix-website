@@ -11,7 +11,7 @@ export const IndustriesSection: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono">
               SECTOR CAPABILITIES
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -24,7 +24,7 @@ export const IndustriesSection: React.FC = () => {
           <div>
             <Link
               href="/industries"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-800 hover:text-orange-600 text-sm font-bold transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border-2 border-[#f6921e] text-[#d8790c] hover:bg-[#f6921e]/10 text-sm font-bold transition-all shadow-sm"
             >
               <span>Explore All Industries</span>
               <ArrowRight className="w-4 h-4" />
@@ -34,17 +34,21 @@ export const IndustriesSection: React.FC = () => {
 
         {/* Industry Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {INDUSTRIES.map((ind) => (
+          {INDUSTRIES.map((ind, indIdx) => (
             <div
               key={ind.id}
               className="light-card light-card-hover rounded-2xl p-7 flex flex-col justify-between space-y-6 group"
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0">
+                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 ${
+                    indIdx % 2 === 0
+                      ? 'bg-[#307e3e]/10 border-[#307e3e]/30 text-[#307e3e]'
+                      : 'bg-[#f6921e]/10 border-[#f6921e]/30 text-[#f6921e]'
+                  }`}>
                     <Building2 className="w-5 h-5" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#307e3e] transition-colors">
                     {ind.name}
                   </h3>
                 </div>
@@ -61,7 +65,9 @@ export const IndustriesSection: React.FC = () => {
 
                 {/* Qvantix Capability */}
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-mono text-orange-700 font-bold uppercase tracking-wider block">
+                  <span className={`text-[10px] font-mono font-bold uppercase tracking-wider block ${
+                    indIdx % 2 === 0 ? 'text-[#307e3e]' : 'text-[#d8790c]'
+                  }`}>
                     QVANTIX CAPABILITY
                   </span>
                   <p className="text-xs text-slate-900 font-semibold leading-relaxed">
@@ -73,7 +79,9 @@ export const IndustriesSection: React.FC = () => {
                 <div className="space-y-1.5 pt-2">
                   {ind.keySolutions.map((sol, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-xs text-slate-600">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-orange-600 shrink-0" />
+                      <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 ${
+                        indIdx % 2 === 0 ? 'text-[#307e3e]' : 'text-[#f6921e]'
+                      }`} />
                       <span>{sol}</span>
                     </div>
                   ))}
@@ -83,7 +91,7 @@ export const IndustriesSection: React.FC = () => {
               <div className="pt-4 border-t border-slate-100">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 hover:text-orange-700 group-hover:translate-x-1 transition-transform"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f6921e] hover:text-[#d8790c] group-hover:translate-x-1 transition-transform"
                 >
                   <span>Explore Solutions</span>
                   <ChevronRight className="w-4 h-4" />

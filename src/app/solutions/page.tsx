@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { SERVICES } from '@/data/qvantixData';
 import { CheckCircle2, ChevronRight, Cpu } from 'lucide-react';
 import Link from 'next/link';
@@ -14,17 +15,31 @@ export const metadata: Metadata = {
 export default function SolutionsDirectoryPage() {
   return (
     <div className="pt-28 pb-20 bg-white relative">
-      
-      {/* Header */}
-      <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+      {/* Header with Overlay Banner Background */}
+      <section className="relative py-28 md:py-36 overflow-hidden border-b border-slate-800 text-white flex items-center justify-center">
+        {/* Background Banner Image - Vivid & Visible */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/assets/solutions-banner.png"
+            alt="Qvantix Digital & Software Solutions Directory Banner Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Light Overlay Gradient so image is brightly visible & text is sharp */}
+          <div className="absolute inset-0 bg-slate-950/45 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/30" />
+        </div>
+
+        {/* Text Overlay */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono px-4 py-1.5 rounded-full bg-slate-900/80 border border-[#f6921e]/50 backdrop-blur-md inline-block shadow-lg">
             OUR CAPABILITIES
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-md">
             Digital & Software Solutions Directory
           </h1>
-          <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-slate-100 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-semibold drop-shadow">
             One team providing end-to-end custom software engineering, artificial intelligence, software testing, search engine optimization, paid ad campaigns, and creative design.
           </p>
         </div>
@@ -42,7 +57,7 @@ export default function SolutionsDirectoryPage() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-orange-600 font-bold px-2.5 py-1 rounded bg-orange-50 border border-orange-200">
+                    <span className="text-xs font-mono font-bold px-2.5 py-1 rounded border text-[#d8790c] bg-[#f6921e]/10 border-[#f6921e]/30">
                       SOLUTION {index + 1 < 10 ? `0${index + 1}` : index + 1}
                     </span>
                     <span className="text-xs font-mono text-slate-500 font-medium">
@@ -50,7 +65,7 @@ export default function SolutionsDirectoryPage() {
                     </span>
                   </div>
 
-                  <h2 className="text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                  <h2 className="text-2xl font-bold text-slate-900 group-hover:text-[#307e3e] transition-colors">
                     {service.title}
                   </h2>
 
@@ -65,7 +80,7 @@ export default function SolutionsDirectoryPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {service.capabilities.slice(0, 4).map((cap, i) => (
                         <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-orange-600 shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-[#307e3e]" />
                           <span>{cap}</span>
                         </div>
                       ))}
@@ -83,7 +98,7 @@ export default function SolutionsDirectoryPage() {
                   </div>
                   <Link
                     href={`/solutions/${service.slug}`}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-orange-600 text-white text-xs font-bold hover:bg-orange-700 transition-all shrink-0"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#307e3e] hover:bg-[#246330] text-white text-xs font-bold transition-all shrink-0"
                   >
                     <span>View Details</span>
                     <ChevronRight className="w-4 h-4" />

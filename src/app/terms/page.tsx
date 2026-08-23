@@ -42,7 +42,7 @@ export default function TermsPage() {
               These terms are governed by the laws of Tamil Nadu, India. For inquiries, contact{' '}
               <a
                 href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
-                className="text-orange-600 hover:text-orange-700 underline font-mono font-bold"
+                className="text-emerald-700 hover:text-emerald-800 underline font-mono font-bold"
               >
                 {COMPANY_INFO.contactPlaceholder.email}
               </a>.

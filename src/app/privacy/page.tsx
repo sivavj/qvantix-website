@@ -42,7 +42,7 @@ export default function PrivacyPage() {
               For any privacy or data protection inquiries, contact Qvantix Digital & Software Solutions at{' '}
               <a
                 href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
-                className="text-orange-600 hover:text-orange-700 underline font-mono font-bold"
+                className="text-emerald-700 hover:text-emerald-800 underline font-mono font-bold"
               >
                 {COMPANY_INFO.contactPlaceholder.email}
               </a>.

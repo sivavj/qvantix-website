@@ -47,7 +47,7 @@ ${formData.message || 'No additional details provided.'}`;
       {/* Left Info Panel */}
       <div className="lg:col-span-5 space-y-8">
         <div className="space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono">
             LET'S TALK
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -66,7 +66,7 @@ ${formData.message || 'No additional details provided.'}`;
 
           <ul className="space-y-4 text-sm text-slate-700">
             <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-orange-100 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#f6921e]/10 border border-[#f6921e]/30 flex items-center justify-center text-[#f6921e] shrink-0">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
@@ -76,14 +76,14 @@ ${formData.message || 'No additional details provided.'}`;
             </li>
 
             <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-orange-100 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#f6921e]/10 border border-[#f6921e]/30 flex items-center justify-center text-[#f6921e] shrink-0">
                 <Mail className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-xs text-slate-500 font-mono block">OFFICIAL ENQUIRIES</span>
                 <a
                   href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
-                  className="font-mono text-xs font-bold text-orange-700 hover:text-orange-600 hover:underline transition-colors"
+                  className="font-mono text-xs font-bold text-[#f6921e] hover:text-[#d8790c] hover:underline transition-colors"
                 >
                   {COMPANY_INFO.contactPlaceholder.email}
                 </a>
@@ -91,14 +91,14 @@ ${formData.message || 'No additional details provided.'}`;
             </li>
 
             <li className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-orange-100 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#f6921e]/10 border border-[#f6921e]/30 flex items-center justify-center text-[#f6921e] shrink-0">
                 <Phone className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-xs text-slate-500 font-mono block">PHONE & WHATSAPP</span>
                 <a
                   href={`tel:${COMPANY_INFO.contactPlaceholder.telPhone || '+916380648132'}`}
-                  className="font-mono text-xs font-bold text-slate-900 hover:text-orange-600 transition-colors block"
+                  className="font-mono text-xs font-bold text-slate-900 hover:text-[#f6921e] transition-colors block"
                 >
                   {COMPANY_INFO.contactPlaceholder.phone}
                 </a>
@@ -106,7 +106,7 @@ ${formData.message || 'No additional details provided.'}`;
                   href={`https://wa.me/916380648132`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[11px] font-mono font-semibold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1 mt-0.5"
+                  className="text-[11px] font-mono font-semibold text-[#307e3e] hover:text-[#246330] inline-flex items-center gap-1 mt-0.5"
                 >
                   <span>Chat on WhatsApp →</span>
                 </a>
@@ -116,22 +116,22 @@ ${formData.message || 'No additional details provided.'}`;
         </div>
 
         {/* Commitments Box */}
-        <div className="p-6 rounded-2xl bg-orange-50 border border-orange-200 space-y-3">
-          <div className="flex items-center gap-2 text-orange-800 text-xs font-bold font-mono">
-            <ShieldCheck className="w-4 h-4 text-orange-600" />
+        <div className="p-6 rounded-2xl bg-[#307e3e]/10 border border-[#307e3e]/30 space-y-3">
+          <div className="flex items-center gap-2 text-[#307e3e] text-xs font-bold font-mono">
+            <ShieldCheck className="w-4 h-4 text-[#307e3e]" />
             <span>OUR CONSULTATION COMMITMENT</span>
           </div>
           <ul className="space-y-2 text-xs text-slate-800 font-medium">
             <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-orange-600" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#307e3e]" />
               <span>Response within 24 business hours</span>
             </li>
             <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-orange-600" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#307e3e]" />
               <span>Strict project confidentiality</span>
             </li>
             <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-orange-600" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#307e3e]" />
               <span>Tailored solution architecture roadmap</span>
             </li>
           </ul>
@@ -177,7 +177,7 @@ ${formData.message || 'No additional details provided.'}`;
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Anand Kumar"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                   />
                 </div>
 
@@ -193,7 +193,7 @@ ${formData.message || 'No additional details provided.'}`;
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     placeholder="e.g. Apex Enterprises"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                   />
                 </div>
 
@@ -213,7 +213,7 @@ ${formData.message || 'No additional details provided.'}`;
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="anand@company.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                   />
                 </div>
 
@@ -228,7 +228,7 @@ ${formData.message || 'No additional details provided.'}`;
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                   />
                 </div>
 
@@ -243,7 +243,7 @@ ${formData.message || 'No additional details provided.'}`;
                   id="service"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                 >
                   {SERVICES.map((s) => (
                     <option key={s.id} value={s.title}>
@@ -264,7 +264,7 @@ ${formData.message || 'No additional details provided.'}`;
                     id="budget"
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                   >
                     <option value="Under ₹5 Lakhs">Under ₹5 Lakhs / $6k</option>
                     <option value="₹5 Lakhs - ₹15 Lakhs">₹5 Lakhs - ₹15 Lakhs</option>
@@ -282,7 +282,7 @@ ${formData.message || 'No additional details provided.'}`;
                     id="timeline"
                     value={formData.timeline}
                     onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                   >
                     <option value="Immediate">Immediate (1-2 Months)</option>
                     <option value="3-6 Months">3-6 Months</option>
@@ -304,14 +304,14 @@ ${formData.message || 'No additional details provided.'}`;
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Describe your project, target users, or operational goals..."
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#307e3e] focus:bg-white"
                 />
               </div>
 
               {/* Submit CTA Button */}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-white bg-orange-600 hover:bg-orange-700 shadow-lg shadow-orange-600/20 transition-all duration-200 focus:ring-2 focus:ring-orange-500"
+                className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-[#f6921e] to-[#307e3e] hover:from-[#d8790c] hover:to-[#246330] shadow-lg shadow-[#f6921e]/20 transition-all duration-200 focus:ring-2 focus:ring-[#307e3e]"
               >
                 <span>Send Enquiry</span>
                 <Send className="w-4 h-4" />

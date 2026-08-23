@@ -67,7 +67,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       {/* Header */}
       <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-700 text-xs font-mono font-bold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f6921e]/10 border border-[#f6921e]/30 text-[#f6921e] text-xs font-mono font-bold">
             <span>{service.category}</span>
           </div>
 
@@ -82,7 +82,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white bg-orange-600 hover:bg-orange-700 shadow-md shadow-orange-600/20 transition-all text-sm"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white bg-[#307e3e] hover:bg-[#246330] shadow-md shadow-[#307e3e]/20 transition-all text-sm"
             >
               <span>Discuss Your Project</span>
               <ArrowRight className="w-4 h-4" />
@@ -111,7 +111,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {service.capabilities.map((cap, i) => (
                     <div key={i} className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#307e3e] shrink-0 mt-0.5" />
                       <span className="text-xs text-slate-800 font-semibold">{cap}</span>
                     </div>
                   ))}
@@ -123,8 +123,8 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <h3 className="text-xl font-bold text-slate-900">Commercial Value</h3>
                 <div className="space-y-2">
                   {service.businessBenefits.map((ben, idx) => (
-                    <div key={idx} className="flex items-center gap-3 p-3.5 rounded-xl bg-orange-50 border border-orange-200 text-xs text-orange-900 font-bold">
-                      <ShieldCheck className="w-4 h-4 text-orange-600 shrink-0" />
+                    <div key={idx} className="flex items-center gap-3 p-3.5 rounded-xl bg-[#307e3e]/10 border border-[#307e3e]/30 text-xs text-slate-900 font-bold">
+                      <ShieldCheck className="w-4 h-4 text-[#307e3e] shrink-0" />
                       <span>{ben}</span>
                     </div>
                   ))}
@@ -142,7 +142,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <div className="flex flex-wrap gap-2">
                   {service.technologies.map((tech) => (
                     <span key={tech} className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-mono text-slate-800 flex items-center gap-1.5 font-medium shadow-xs">
-                      <Cpu className="w-3.5 h-3.5 text-orange-600" />
+                      <Cpu className="w-3.5 h-3.5 text-[#307e3e]" />
                       <span>{tech}</span>
                     </span>
                   ))}
@@ -154,7 +154,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   </p>
                   <Link
                     href="/contact"
-                    className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl font-bold text-white bg-orange-600 hover:bg-orange-700 text-sm transition-all shadow-md shadow-orange-600/20"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl font-bold text-white bg-[#307e3e] hover:bg-[#246330] text-sm transition-all shadow-md shadow-[#307e3e]/20"
                   >
                     <span>Talk to an Expert</span>
                     <ArrowRight className="w-4 h-4" />

@@ -8,18 +8,19 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 relative overflow-hidden border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Main Footer Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
-          
+
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block p-1 bg-white rounded-lg">
               <div className="relative h-10 w-36">
                 <Image
-                  src="/assets/logo.png"
+                  src="/assets/qvlogo.png"
                   alt="Qvantix Software & Digital Solutions"
                   fill
+                  sizes="144px"
                   className="object-contain"
                 />
               </div>
@@ -29,8 +30,8 @@ export const Footer: React.FC = () => {
               Qvantix is a software and digital solutions company helping businesses, startups, and growing brands turn ideas into practical, scalable digital solutions.
             </p>
 
-            <div className="pt-2 flex items-center gap-2 text-xs text-orange-400 font-mono">
-              <CheckCircle2 className="w-4 h-4 text-orange-500" />
+            <div className="pt-2 flex items-center gap-2 text-xs text-[#307e3e] font-mono">
+              <CheckCircle2 className="w-4 h-4 text-[#307e3e]" />
               <span>{COMPANY_INFO.manifesto}</span>
             </div>
           </div>
@@ -42,27 +43,27 @@ export const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/" className="text-slate-400 hover:text-orange-400 transition-colors">
+                <Link href="/" className="text-slate-400 hover:text-[#307e3e] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-400 hover:text-orange-400 transition-colors">
+                <Link href="/about" className="text-slate-400 hover:text-[#307e3e] transition-colors">
                   About Qvantix
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="text-slate-400 hover:text-orange-400 transition-colors">
+                <Link href="/solutions" className="text-slate-400 hover:text-[#307e3e] transition-colors">
                   Solutions & Services
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-slate-400 hover:text-orange-400 transition-colors">
+                <Link href="/industries" className="text-slate-400 hover:text-[#307e3e] transition-colors">
                   Industries Served
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-400 hover:text-orange-400 transition-colors">
+                <Link href="/contact" className="text-slate-400 hover:text-[#307e3e] transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -79,7 +80,7 @@ export const Footer: React.FC = () => {
                 <li key={service.id}>
                   <Link
                     href={`/solutions/${service.slug}`}
-                    className="text-slate-400 hover:text-orange-400 transition-colors"
+                    className="text-slate-400 hover:text-[#f6921e] transition-colors"
                   >
                     {service.title}
                   </Link>
@@ -88,7 +89,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   href="/solutions"
-                  className="text-orange-400 hover:text-orange-300 text-xs font-semibold flex items-center gap-1"
+                  className="text-[#f6921e] hover:text-[#d8790c] text-xs font-semibold flex items-center gap-1"
                 >
                   View All Solutions →
                 </Link>
@@ -103,23 +104,23 @@ export const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3 text-sm text-slate-400">
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-orange-500 shrink-0 mt-1" />
+                <MapPin className="w-4 h-4 text-[#307e3e] shrink-0 mt-1" />
                 <span>{COMPANY_INFO.contactPlaceholder.location}</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-orange-500 shrink-0" />
+                <Mail className="w-4 h-4 text-[#f6921e] shrink-0" />
                 <a
                   href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
-                  className="font-mono text-xs text-slate-300 hover:text-orange-400 transition-colors"
+                  className="font-mono text-xs text-slate-300 hover:text-[#f6921e] transition-colors"
                 >
                   {COMPANY_INFO.contactPlaceholder.email}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-orange-500 shrink-0" />
+                <Phone className="w-4 h-4 text-[#307e3e] shrink-0" />
                 <a
                   href={`tel:${COMPANY_INFO.contactPlaceholder.telPhone || '+916380648132'}`}
-                  className="font-mono text-xs text-slate-300 hover:text-orange-400 transition-colors"
+                  className="font-mono text-xs text-slate-300 hover:text-[#307e3e] transition-colors"
                 >
                   {COMPANY_INFO.contactPlaceholder.phone}
                 </a>
@@ -128,7 +129,7 @@ export const Footer: React.FC = () => {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-bold px-4 py-2 rounded bg-orange-600 hover:bg-orange-700 text-white shadow transition-all"
+                className="inline-flex items-center gap-2 text-xs font-bold px-4.5 py-2.5 rounded-xl bg-gradient-to-r from-[#f6921e] to-[#307e3e] hover:from-[#d8790c] hover:to-[#246330] text-white shadow transition-all"
               >
                 <span>Start a Conversation</span>
                 <ArrowRight className="w-3.5 h-3.5" />

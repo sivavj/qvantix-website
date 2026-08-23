@@ -43,8 +43,8 @@ export const VisualShowcaseSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-700 text-xs font-mono font-bold uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-orange-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f6921e]/10 border border-[#f6921e]/30 text-[#f6921e] text-xs font-mono font-bold uppercase">
+            <Sparkles className="w-3.5 h-3.5 text-[#f6921e]" />
             <span>VISUAL CAPABILITY SHOWCASE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -60,7 +60,7 @@ export const VisualShowcaseSection: React.FC = () => {
           {SHOWCASE_ITEMS.map((item) => (
             <div
               key={item.id}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:border-[#f6921e] transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* 3D Image Banner */}
@@ -69,16 +69,17 @@ export const VisualShowcaseSection: React.FC = () => {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-slate-200/80 text-[10px] font-mono font-bold text-orange-700">
+                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#f6921e]/30 text-[10px] font-mono font-bold text-[#d8790c]">
                     {item.category}
                   </div>
                 </div>
 
                 {/* Content Details */}
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#307e3e] transition-colors">
                     {item.title}
                   </h3>
 
@@ -104,7 +105,7 @@ export const VisualShowcaseSection: React.FC = () => {
               <div className="p-6 pt-0 border-t border-slate-100/50 mt-4">
                 <Link
                   href={item.link}
-                  className="inline-flex items-center gap-2 text-xs font-bold text-orange-600 hover:text-orange-700 transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#f6921e] hover:text-[#d8790c] transition-colors group/link"
                 >
                   <span>Explore {item.title}</span>
                   <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />

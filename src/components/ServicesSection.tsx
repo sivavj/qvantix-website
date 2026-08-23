@@ -17,7 +17,7 @@ export const ServicesSection: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#307e3e] font-mono">
               SOLUTIONS & SERVICES
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -30,7 +30,7 @@ export const ServicesSection: React.FC = () => {
           <div>
             <Link
               href="/solutions"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 hover:text-orange-600 hover:border-orange-500 text-sm font-bold shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border-2 border-[#f6921e] text-[#d8790c] hover:bg-[#f6921e]/10 text-sm font-bold shadow-sm transition-all"
             >
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4" />
@@ -52,14 +52,14 @@ export const ServicesSection: React.FC = () => {
                   onClick={() => setSelectedServiceId(service.id)}
                   className={`w-full text-left p-4 rounded-xl transition-all duration-200 flex items-center justify-between border ${
                     isSelected
-                      ? 'bg-white border-orange-500 shadow-md text-slate-900 font-bold'
+                      ? 'bg-white border-2 border-[#307e3e] shadow-md text-slate-900 font-bold'
                       : 'bg-slate-100/70 border-slate-200 text-slate-700 hover:bg-white hover:text-slate-900'
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <span
                       className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
-                        isSelected ? 'bg-orange-500 text-white' : 'bg-slate-200 text-slate-700'
+                        isSelected ? 'bg-gradient-to-r from-[#f6921e] to-[#307e3e] text-white' : 'bg-slate-200 text-slate-700'
                       }`}
                     >
                       0{idx + 1}
@@ -68,7 +68,7 @@ export const ServicesSection: React.FC = () => {
                   </div>
                   <ChevronRight
                     className={`w-4 h-4 transition-transform ${
-                      isSelected ? 'text-orange-600 translate-x-1' : 'text-slate-400'
+                      isSelected ? 'text-[#307e3e] translate-x-1' : 'text-slate-400'
                     }`}
                   />
                 </button>
@@ -81,7 +81,7 @@ export const ServicesSection: React.FC = () => {
             <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg space-y-6">
               
               <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#307e3e] bg-[#307e3e]/10 px-3 py-1 rounded-full border border-[#307e3e]/30">
                   {activeService.category}
                 </span>
                 <span className="text-xs font-mono text-slate-400">QVANTIX SOLUTION DETAILED</span>
@@ -104,7 +104,7 @@ export const ServicesSection: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {activeService.capabilities.map((cap, i) => (
                     <div key={i} className="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
-                      <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#307e3e] shrink-0 mt-0.5" />
                       <span>{cap}</span>
                     </div>
                   ))}
@@ -122,7 +122,7 @@ export const ServicesSection: React.FC = () => {
                       key={t}
                       className="px-3 py-1 rounded-lg bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex items-center gap-1.5"
                     >
-                      <Cpu className="w-3.5 h-3.5 text-orange-600" />
+                      <Cpu className="w-3.5 h-3.5 text-[#307e3e]" />
                       <span>{t}</span>
                     </span>
                   ))}
@@ -130,9 +130,9 @@ export const ServicesSection: React.FC = () => {
               </div>
 
               {/* Business Benefits */}
-              <div className="p-4 rounded-xl bg-orange-50/70 border border-orange-200 space-y-2">
-                <div className="flex items-center gap-2 text-xs font-bold text-orange-800 font-mono">
-                  <ShieldCheck className="w-4 h-4 text-orange-600" />
+              <div className="p-4 rounded-xl bg-[#307e3e]/10 border border-[#307e3e]/30 space-y-2">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#307e3e] font-mono">
+                  <ShieldCheck className="w-4 h-4 text-[#307e3e]" />
                   <span>COMMERCIAL VALUE</span>
                 </div>
                 <p className="text-xs font-semibold text-slate-800 leading-relaxed">
@@ -144,7 +144,7 @@ export const ServicesSection: React.FC = () => {
               <div className="pt-4 border-t border-slate-100 flex justify-end">
                 <Link
                   href={`/solutions/${activeService.slug}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-orange-600 hover:bg-orange-700 shadow-md shadow-orange-600/20 text-sm transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#307e3e] to-[#246330] hover:from-[#246330] hover:to-[#1e5229] shadow-md shadow-[#307e3e]/20 text-sm transition-all"
                 >
                   <span>Explore {activeService.title}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -161,7 +161,7 @@ export const ServicesSection: React.FC = () => {
           {SERVICES.map((service, idx) => (
             <div key={service.id} className="bg-white border border-slate-200 rounded-xl p-6 space-y-4 shadow-sm">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">
+                <span className="text-xs font-mono font-bold text-[#d8790c] bg-[#f6921e]/10 px-2.5 py-1 rounded border border-[#f6921e]/30">
                   0{idx + 1}
                 </span>
                 <span className="text-xs font-mono text-slate-500">{service.category}</span>
@@ -173,7 +173,7 @@ export const ServicesSection: React.FC = () => {
               <div className="space-y-1.5 pt-2">
                 {service.capabilities.slice(0, 3).map((cap, i) => (
                   <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-600 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#307e3e] shrink-0" />
                     <span>{cap}</span>
                   </div>
                 ))}
@@ -182,7 +182,7 @@ export const ServicesSection: React.FC = () => {
               <div className="pt-3">
                 <Link
                   href={`/solutions/${service.slug}`}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-orange-600 hover:text-orange-700"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#f6921e] hover:text-[#d8790c]"
                 >
                   <span>Explore Solution</span>
                   <ChevronRight className="w-4 h-4" />

@@ -28,7 +28,7 @@ export const FAQSection: React.FC<FAQProps> = ({
         
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono">
             QUESTIONS & ANSWERS
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -47,19 +47,19 @@ export const FAQSection: React.FC<FAQProps> = ({
               <div
                 key={idx}
                 className={`bg-white rounded-2xl border transition-all shadow-sm ${
-                  isOpen ? 'border-orange-500 ring-1 ring-orange-500/20' : 'border-slate-200'
+                  isOpen ? 'border-[#f6921e] ring-1 ring-[#f6921e]/20' : 'border-slate-200'
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-2xl"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-[#307e3e] rounded-2xl"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3">
                     <HelpCircle
                       className={`w-5 h-5 shrink-0 ${
-                        isOpen ? 'text-orange-600' : 'text-slate-400'
+                        isOpen ? 'text-[#307e3e]' : 'text-slate-400'
                       }`}
                     />
                     <span className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
@@ -68,7 +68,7 @@ export const FAQSection: React.FC<FAQProps> = ({
                   </div>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 text-orange-600' : ''
+                      isOpen ? 'rotate-180 text-[#307e3e]' : ''
                     }`}
                   />
                 </button>

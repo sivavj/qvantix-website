@@ -40,12 +40,12 @@ export const ProblemSolutionSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono">
             THE BUSINESS CHALLENGE
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Technology should solve business problems —{' '}
-            <span className="text-orange-gradient">not create more of them.</span>
+            <span className="text-[#307e3e]">not create more of them.</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg">
             Many companies struggle with bloated software, disconnected vendors, or websites that fail to convert visitors into inquiries. Qvantix bridges technology and business growth.
@@ -61,10 +61,10 @@ export const ProblemSolutionSection: React.FC = () => {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold text-orange-600 uppercase tracking-widest px-2.5 py-1 rounded bg-orange-50 border border-orange-200">
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest px-2.5 py-1 rounded border text-[#d8790c] bg-[#f6921e]/10 border-[#f6921e]/30">
                     {item.title}
                   </span>
-                  <AlertTriangle className="w-5 h-5 text-amber-500" />
+                  <AlertTriangle className="w-5 h-5 text-[#f6921e]" />
                 </div>
 
                 <h3 className="text-xl font-bold text-slate-900 leading-snug">
@@ -79,10 +79,10 @@ export const ProblemSolutionSection: React.FC = () => {
                 <div className="border-t border-slate-100 my-3" />
 
                 {/* Solution Box */}
-                <div className="flex items-start gap-3 bg-orange-50/60 border border-orange-200/80 rounded-xl p-4">
-                  <CheckCircle2 className="w-5 h-5 text-orange-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 bg-[#307e3e]/10 border border-[#307e3e]/30 rounded-xl p-4">
+                  <CheckCircle2 className="w-5 h-5 text-[#307e3e] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-orange-700 block">
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#307e3e] block">
                       HOW QVANTIX SOLVES THIS
                     </span>
                     <p className="text-sm font-semibold text-slate-800 mt-0.5">
@@ -98,7 +98,7 @@ export const ProblemSolutionSection: React.FC = () => {
         <div className="mt-12 text-center">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#f6921e] hover:text-[#d8790c] transition-colors"
           >
             <span>Facing one of these challenges? Let's discuss a tailored solution</span>
             <ArrowRight className="w-4 h-4" />

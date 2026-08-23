@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { COMPANY_INFO } from '@/data/qvantixData';
 import { CheckCircle2, ShieldCheck, Target, Eye, HeartHandshake } from 'lucide-react';
 import { CTASection } from '@/components/CTASection';
@@ -13,17 +14,31 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="pt-28 pb-20 bg-white relative">
-      
-      {/* Header */}
-      <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+      {/* Header with Overlay Banner Background */}
+      <section className="relative py-28 md:py-36 overflow-hidden border-b border-slate-800 text-white flex items-center justify-center">
+        {/* Background Banner Image - Vivid & Visible */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/assets/about-banner.png"
+            alt="About Qvantix Software & Digital Solutions Banner Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Light Overlay Gradient so image is brightly visible & text is sharp */}
+          <div className="absolute inset-0 bg-slate-950/45 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/30" />
+        </div>
+
+        {/* Text Overlay */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono px-4 py-1.5 rounded-full bg-slate-900/80 border border-[#f6921e]/50 backdrop-blur-md inline-block shadow-lg">
             ABOUT QVANTIX
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-md">
             Building Digital Solutions That Move Businesses Forward
           </h1>
-          <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-slate-100 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-semibold drop-shadow">
             Qvantix is a digital and software solutions company in Tamil Nadu helping businesses, startups, and growing brands turn ideas into practical digital solutions.
           </p>
         </div>
@@ -35,7 +50,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-orange-600">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#f6921e]">
                 WHO WE ARE
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -48,8 +63,8 @@ export default function AboutPage() {
                 By bringing technical expertise and creative thinking together, we help businesses overcome digital challenges and turn their ideas into solutions that deliver real value. We focus on business-specific solutions, reliable execution, modern technology, and long-term digital growth.
               </p>
               
-              <div className="p-4 rounded-xl bg-orange-50 border border-orange-200 font-mono text-sm text-orange-800 flex items-center gap-3 font-semibold">
-                <ShieldCheck className="w-5 h-5 text-orange-600 shrink-0" />
+              <div className="p-4 rounded-xl bg-[#307e3e]/10 border border-[#307e3e]/30 font-mono text-sm text-[#307e3e] flex items-center gap-3 font-semibold">
+                <ShieldCheck className="w-5 h-5 text-[#307e3e] shrink-0" />
                 <span>{COMPANY_INFO.quotes?.whoWeAre || 'Your Vision. Our Technology. Built to Grow.'}</span>
               </div>
             </div>
@@ -58,13 +73,13 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 space-y-6 shadow-sm">
                 <div className="flex items-center gap-3 border-b border-slate-200 pb-4">
-                  <HeartHandshake className="w-6 h-6 text-orange-600" />
+                  <HeartHandshake className="w-6 h-6 text-[#307e3e]" />
                   <h3 className="text-xl font-bold text-slate-900">Our Core Commitments</h3>
                 </div>
                 <ul className="space-y-3 text-sm text-slate-700 font-medium">
                   {COMPANY_INFO.commitments.map((com, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#307e3e] shrink-0 mt-0.5" />
                       <span>{com}</span>
                     </li>
                   ))}
@@ -83,10 +98,10 @@ export default function AboutPage() {
             
             {/* Vision */}
             <div className="bg-white rounded-2xl p-8 border border-slate-200 space-y-4 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600">
+              <div className="w-12 h-12 rounded-xl bg-[#307e3e]/10 border border-[#307e3e]/30 flex items-center justify-center text-[#307e3e]">
                 <Eye className="w-6 h-6" />
               </div>
-              <span className="text-xs font-mono text-orange-600 font-bold uppercase tracking-widest block">
+              <span className="text-xs font-mono text-[#307e3e] font-bold uppercase tracking-widest block">
                 OUR VISION
               </span>
               <h3 className="text-2xl font-bold text-slate-900">Long-Term Value & Trusted Partnership</h3>
@@ -97,10 +112,10 @@ export default function AboutPage() {
 
             {/* Mission */}
             <div className="bg-white rounded-2xl p-8 border border-slate-200 space-y-4 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600">
+              <div className="w-12 h-12 rounded-xl bg-[#f6921e]/10 border border-[#f6921e]/30 flex items-center justify-center text-[#f6921e]">
                 <Target className="w-6 h-6" />
               </div>
-              <span className="text-xs font-mono text-orange-600 font-bold uppercase tracking-widest block">
+              <span className="text-xs font-mono text-[#f6921e] font-bold uppercase tracking-widest block">
                 OUR MISSION
               </span>
               <h3 className="text-2xl font-bold text-slate-900">Understanding First, Delivering Impact</h3>

@@ -9,7 +9,7 @@ export const TechEcosystemSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">
+          <span className="text-xs font-bold uppercase tracking-widest text-emerald-700 font-mono">
             CAPABILITIES & INFRASTRUCTURE
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -22,13 +22,19 @@ export const TechEcosystemSection: React.FC = () => {
 
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TECH_ECOSYSTEM.map((eco) => (
+          {TECH_ECOSYSTEM.map((eco, idx) => (
             <div
               key={eco.category}
-              className="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm hover:border-orange-500/50 transition-colors"
+              className={`bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm transition-colors ${
+                idx % 2 === 0 ? 'hover:border-emerald-600/50' : 'hover:border-orange-500/50'
+              }`}
             >
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0">
+                <div className={`w-9 h-9 rounded-xl border flex items-center justify-center shrink-0 ${
+                  idx % 2 === 0
+                    ? 'bg-emerald-50 border-emerald-200 text-emerald-700'
+                    : 'bg-orange-50 border-orange-200 text-orange-600'
+                }`}>
                   <Cpu className="w-4 h-4" />
                 </div>
                 <h3 className="text-base font-bold text-slate-900 font-mono">
@@ -40,9 +46,9 @@ export const TechEcosystemSection: React.FC = () => {
                 {eco.technologies.map((tech) => (
                   <div
                     key={tech}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono font-medium text-slate-800 hover:border-orange-300 transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono font-medium text-slate-800 hover:border-emerald-300 transition-colors"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-600" />
+                    <CheckCircle2 className={`w-3.5 h-3.5 ${idx % 2 === 0 ? 'text-emerald-700' : 'text-orange-600'}`} />
                     <span>{tech}</span>
                   </div>
                 ))}
