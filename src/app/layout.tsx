@@ -56,6 +56,15 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: '/assets/logo.png', type: 'image/png' }
+    ],
+    shortcut: ['/assets/logo.png'],
+    apple: [
+      { url: '/assets/logo.png', type: 'image/png' }
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -86,6 +95,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/assets/logo.png?v=2" type="image/png" />
+        <link rel="shortcut icon" href="/assets/logo.png?v=2" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
