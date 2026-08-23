@@ -3,6 +3,7 @@ import { HeroSection } from '@/components/HeroSection';
 import { TrustBar } from '@/components/TrustBar';
 import { ProblemSolutionSection } from '@/components/ProblemSolutionSection';
 import { ServicesSection } from '@/components/ServicesSection';
+import { VisualShowcaseSection } from '@/components/VisualShowcaseSection';
 import { WhyQvantixSection } from '@/components/WhyQvantixSection';
 import { DifferentiatorBanner } from '@/components/DifferentiatorBanner';
 import { ProcessSection } from '@/components/ProcessSection';
@@ -18,6 +19,7 @@ export default function Home() {
       <TrustBar />
       <ProblemSolutionSection />
       <ServicesSection />
+      <VisualShowcaseSection />
       <WhyQvantixSection />
       <DifferentiatorBanner />
       <ProcessSection />

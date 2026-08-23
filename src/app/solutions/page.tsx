@@ -43,7 +43,7 @@ export default function SolutionsDirectoryPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono text-orange-600 font-bold px-2.5 py-1 rounded bg-orange-50 border border-orange-200">
-                      SOLUTION 0{index + 1}
+                      SOLUTION {index + 1 < 10 ? `0${index + 1}` : index + 1}
                     </span>
                     <span className="text-xs font-mono text-slate-500 font-medium">
                       {service.category}

@@ -32,7 +32,7 @@ export const ServicesSection: React.FC = () => {
               href="/solutions"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 hover:text-orange-600 hover:border-orange-500 text-sm font-bold shadow-sm transition-all"
             >
-              <span>View All 10 Services</span>
+              <span>View All Services</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

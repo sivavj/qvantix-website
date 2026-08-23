@@ -1,10 +1,15 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, CheckCircle2, Sparkles } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, ShieldCheck, CheckCircle2, Sparkles, Image as ImageIcon, Cpu } from 'lucide-react';
 import { COMPANY_INFO } from '@/data/qvantixData';
 import { TechArchitectureGraphic } from './TechArchitectureGraphic';
 
 export const HeroSection: React.FC = () => {
+  const [activeView, setActiveView] = useState<'illustration' | 'interactive'>('illustration');
+
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-white bg-radial-light overflow-hidden">
       {/* Background ambient lighting */}
@@ -23,25 +28,25 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Benefit Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
-              Technology built around the way{' '}
-              <span className="text-orange-gradient">your business works.</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              Looking for a reliable software development and digital solutions company in{' '}
+              <span className="text-orange-gradient">Tamil Nadu?</span>
             </h1>
 
             {/* Supporting Copy */}
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-              {COMPANY_INFO.heroSubheadline}
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl font-medium">
+              Qvantix helps startups, small businesses, and growing companies build practical digital solutions tailored to their business goals — combining technology and creativity to achieve sustainable growth.
             </p>
 
             {/* Capability Bullets */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-700 font-medium">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-700 font-semibold">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
-                <span>Custom Software & Business ERPs</span>
+                <span>Custom Software & Website Development</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
-                <span>Website & Mobile App Engineering</span>
+                <span>Mobile Apps & Software Testing (QA)</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
@@ -78,9 +83,74 @@ export const HeroSection: React.FC = () => {
 
           </div>
 
-          {/* Right Visual Architecture */}
-          <div className="lg:col-span-5 flex justify-center">
-            <TechArchitectureGraphic />
+          {/* Right Visual Container */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center">
+            
+            {/* View Switcher */}
+            <div className="mb-4 inline-flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 shadow-xs">
+              <button
+                type="button"
+                onClick={() => setActiveView('illustration')}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold font-mono transition-all flex items-center gap-1.5 ${
+                  activeView === 'illustration'
+                    ? 'bg-white text-orange-600 shadow-sm border border-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <ImageIcon className="w-3.5 h-3.5" />
+                <span>3D Visual</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveView('interactive')}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold font-mono transition-all flex items-center gap-1.5 ${
+                  activeView === 'interactive'
+                    ? 'bg-white text-orange-600 shadow-sm border border-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <Cpu className="w-3.5 h-3.5" />
+                <span>Tech Stack</span>
+              </button>
+            </div>
+
+            {activeView === 'illustration' ? (
+              <div className="relative w-full max-w-lg group">
+                {/* Outer Glow */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500" />
+                
+                {/* Main Card */}
+                <div className="relative bg-white border border-slate-200 rounded-2xl p-2.5 shadow-2xl overflow-hidden">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-100">
+                    <Image
+                      src="/assets/hero-3d.jpg"
+                      alt="Qvantix Digital & Software Solutions 3D Visual Illustration"
+                      fill
+                      priority
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+
+                  {/* Overlay Badge */}
+                  <div className="p-3 bg-white/90 backdrop-blur-md rounded-xl mt-2 border border-slate-100 flex items-center justify-between">
+                    <div>
+                      <span className="text-[10px] font-mono font-bold text-orange-600 uppercase tracking-widest block">
+                        DIGITAL & SOFTWARE SOLUTIONS
+                      </span>
+                      <span className="text-xs font-extrabold text-slate-900">
+                        Tailored Technology Ecosystem
+                      </span>
+                    </div>
+                    <span className="px-2 py-1 rounded bg-orange-50 text-[10px] font-mono font-bold text-orange-700 border border-orange-200">
+                      3D ARCHITECTURE
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <TechArchitectureGraphic />
+            )}
+
           </div>
 
         </div>

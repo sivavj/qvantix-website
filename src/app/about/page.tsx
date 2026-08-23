@@ -24,7 +24,7 @@ export default function AboutPage() {
             Building Digital Solutions That Move Businesses Forward
           </h1>
           <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            Qvantix is a software and digital solutions company helping businesses, startups, and growing brands turn ideas into practical, scalable digital solutions.
+            Qvantix is a digital and software solutions company in Tamil Nadu helping businesses, startups, and growing brands turn ideas into practical digital solutions.
           </p>
         </div>
       </section>
@@ -39,18 +39,18 @@ export default function AboutPage() {
                 WHO WE ARE
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                Technical Expertise United with Strategic Thinking
+                Qvantix Digital & Software Solutions in Tamil Nadu
               </h2>
               <p className="text-slate-600 text-base leading-relaxed font-medium">
-                At Qvantix, our approach is simple — understand your business, identify the right digital opportunity, and build solutions that create real value. We bring together software development, website & mobile app development, AI & ML, software testing, digital marketing, and creative design under one roof.
+                We help businesses turn their goals into practical digital solutions through custom software development, website and mobile app development, AI & ML solutions, software testing, SEO, digital marketing, graphic design, and logo design. Our team combines technology, strategy, and creativity to build business-focused digital solutions in Tamil Nadu that improve online presence, streamline operations, and support long-term growth.
               </p>
               <p className="text-slate-600 text-base leading-relaxed">
-                Whether you're launching a new business, upgrading existing technology, or looking to generate more customers online, we focus on delivering solutions that are simple, practical, reliable, and ready for the future.
+                By bringing technical expertise and creative thinking together, we help businesses overcome digital challenges and turn their ideas into solutions that deliver real value. We focus on business-specific solutions, reliable execution, modern technology, and long-term digital growth.
               </p>
               
               <div className="p-4 rounded-xl bg-orange-50 border border-orange-200 font-mono text-sm text-orange-800 flex items-center gap-3 font-semibold">
                 <ShieldCheck className="w-5 h-5 text-orange-600 shrink-0" />
-                <span>Your Vision. Our Technology. Built to Grow.</span>
+                <span>{COMPANY_INFO.quotes?.whoWeAre || 'Your Vision. Our Technology. Built to Grow.'}</span>
               </div>
             </div>
 
