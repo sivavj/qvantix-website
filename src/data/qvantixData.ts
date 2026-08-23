@@ -71,6 +71,8 @@ export const COMPANY_INFO = {
   contactPlaceholder: {
     email: 'contact@qvantix.com',
     phone: '+91 6380648132',
+    telPhone: '+916380648132',
+    whatsappPhone: '916380648132',
     location: 'Tamil Nadu, India',
     note: 'Tell us what you\'re trying to solve. We\'ll help define the right digital solution.',
   },

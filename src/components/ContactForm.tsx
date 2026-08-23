@@ -19,6 +19,25 @@ export const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Format message for WhatsApp redirection
+    const messageText = `*New Website Consultation Enquiry - Qvantix*
+
+*Name:* ${formData.name}
+*Company:* ${formData.company || 'N/A'}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone || 'N/A'}
+*Service Requested:* ${formData.service}
+*Estimated Budget:* ${formData.budget}
+*Project Timeline:* ${formData.timeline}
+
+*Project Details / Requirements:*
+${formData.message || 'No additional details provided.'}`;
+
+    const whatsappUrl = `https://wa.me/916380648132?text=${encodeURIComponent(messageText)}`;
+    
+    // Open WhatsApp chat in new window/tab
+    window.open(whatsappUrl, '_blank');
     setSubmitted(true);
   };
 
@@ -62,7 +81,12 @@ export const ContactForm: React.FC = () => {
               </div>
               <div>
                 <span className="text-xs text-slate-500 font-mono block">OFFICIAL ENQUIRIES</span>
-                <span className="font-mono text-xs font-bold text-orange-700">{COMPANY_INFO.contactPlaceholder.email}</span>
+                <a
+                  href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
+                  className="font-mono text-xs font-bold text-orange-700 hover:text-orange-600 hover:underline transition-colors"
+                >
+                  {COMPANY_INFO.contactPlaceholder.email}
+                </a>
               </div>
             </li>
 
@@ -71,8 +95,21 @@ export const ContactForm: React.FC = () => {
                 <Phone className="w-4 h-4" />
               </div>
               <div>
-                <span className="text-xs text-slate-500 font-mono block">PHONE CONSULTATION</span>
-                <span className="font-mono text-xs font-bold text-slate-900">{COMPANY_INFO.contactPlaceholder.phone}</span>
+                <span className="text-xs text-slate-500 font-mono block">PHONE & WHATSAPP</span>
+                <a
+                  href={`tel:${COMPANY_INFO.contactPlaceholder.telPhone || '+916380648132'}`}
+                  className="font-mono text-xs font-bold text-slate-900 hover:text-orange-600 transition-colors block"
+                >
+                  {COMPANY_INFO.contactPlaceholder.phone}
+                </a>
+                <a
+                  href={`https://wa.me/916380648132`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] font-mono font-semibold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1 mt-0.5"
+                >
+                  <span>Chat on WhatsApp →</span>
+                </a>
               </div>
             </li>
           </ul>

@@ -108,15 +108,21 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-orange-500 shrink-0" />
-                <span className="font-mono text-xs text-slate-300">
+                <a
+                  href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
+                  className="font-mono text-xs text-slate-300 hover:text-orange-400 transition-colors"
+                >
                   {COMPANY_INFO.contactPlaceholder.email}
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-orange-500 shrink-0" />
-                <span className="font-mono text-xs text-slate-300">
+                <a
+                  href={`tel:${COMPANY_INFO.contactPlaceholder.telPhone || '+916380648132'}`}
+                  className="font-mono text-xs text-slate-300 hover:text-orange-400 transition-colors"
+                >
                   {COMPANY_INFO.contactPlaceholder.phone}
-                </span>
+                </a>
               </li>
             </ul>
             <div className="pt-2">

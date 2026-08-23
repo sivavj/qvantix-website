@@ -40,7 +40,12 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-bold text-slate-900">4. Contact Us</h2>
             <p>
               For any privacy or data protection inquiries, contact Qvantix Digital & Software Solutions at{' '}
-              <span className="text-orange-600 font-mono font-bold">{COMPANY_INFO.contactPlaceholder.email}</span>.
+              <a
+                href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
+                className="text-orange-600 hover:text-orange-700 underline font-mono font-bold"
+              >
+                {COMPANY_INFO.contactPlaceholder.email}
+              </a>.
             </p>
           </section>
         </div>

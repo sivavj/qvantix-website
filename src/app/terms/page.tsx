@@ -40,7 +40,12 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-slate-900">4. Governing Law</h2>
             <p>
               These terms are governed by the laws of Tamil Nadu, India. For inquiries, contact{' '}
-              <span className="text-orange-600 font-mono font-bold">{COMPANY_INFO.contactPlaceholder.email}</span>.
+              <a
+                href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
+                className="text-orange-600 hover:text-orange-700 underline font-mono font-bold"
+              >
+                {COMPANY_INFO.contactPlaceholder.email}
+              </a>.
             </p>
           </section>
         </div>
