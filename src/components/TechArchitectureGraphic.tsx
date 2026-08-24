@@ -7,7 +7,7 @@ export const TechArchitectureGraphic: React.FC = () => {
   return (
     <div className="relative w-full max-w-xl mx-auto">
       {/* Outer Subtle Accent Ring */}
-      <div className="absolute -inset-1.5 rounded-3xl bg-[#307e3e]/20 blur-lg opacity-60" />
+      <div className="absolute -inset-1.5 rounded-3xl bg-[#f6921e]/20 blur-lg opacity-60" />
 
       {/* Main Enterprise Light Glass Box */}
       <div className="relative bg-white border border-slate-200/90 rounded-2xl p-6 shadow-xl backdrop-blur-xl space-y-5">
@@ -34,8 +34,8 @@ export const TechArchitectureGraphic: React.FC = () => {
         <div className="grid grid-cols-3 gap-3">
           
           {/* Node 1: Custom Software */}
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex flex-col items-start gap-2 hover:border-[#307e3e]/50 transition-colors group">
-            <div className="w-9 h-9 rounded-lg bg-[#307e3e]/10 border border-[#307e3e]/30 flex items-center justify-center text-[#307e3e] group-hover:scale-105 transition-transform">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex flex-col items-start gap-2 hover:border-[#f6921e]/50 transition-colors group">
+            <div className="w-9 h-9 rounded-lg bg-[#f6921e]/10 border border-[#f6921e]/30 flex items-center justify-center text-[#f6921e] group-hover:scale-105 transition-transform">
               <Code className="w-4 h-4" />
             </div>
             <div>
@@ -56,8 +56,8 @@ export const TechArchitectureGraphic: React.FC = () => {
           </div>
 
           {/* Node 3: QA Testing */}
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex flex-col items-start gap-2 hover:border-[#307e3e]/50 transition-colors group">
-            <div className="w-9 h-9 rounded-lg bg-[#307e3e]/10 border border-[#307e3e]/30 flex items-center justify-center text-[#307e3e] group-hover:scale-105 transition-transform">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex flex-col items-start gap-2 hover:border-[#f6921e]/50 transition-colors group">
+            <div className="w-9 h-9 rounded-lg bg-[#f6921e]/10 border border-[#f6921e]/30 flex items-center justify-center text-[#f6921e] group-hover:scale-105 transition-transform">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <div>
@@ -72,7 +72,7 @@ export const TechArchitectureGraphic: React.FC = () => {
         <div className="relative bg-slate-900 text-white rounded-xl p-4 space-y-3 font-mono text-xs shadow-inner">
           <div className="flex items-center justify-between border-b border-slate-800 pb-2">
             <div className="flex items-center gap-2">
-              <Workflow className="w-4 h-4 text-[#307e3e]" />
+              <Workflow className="w-4 h-4 text-[#f6921e]" />
               <span className="font-sans text-xs font-bold text-white">Digital Transformation Pipeline</span>
             </div>
             <span className="text-[10px] text-[#307e3e] font-semibold">99.9% Uptime</span>

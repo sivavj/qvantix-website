@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${isActive
-                    ? 'bg-white text-[#307e3e] shadow-sm border border-[#307e3e]/30 font-bold'
+                    ? 'bg-white text-[#307e3e] shadow-sm border border-[#f6921e]/40 font-bold'
                     : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
                     }`}
                 >
@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-5.5 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-[#f6921e] to-[#307e3e] hover:from-[#d8790c] hover:to-[#246330] shadow-md shadow-[#f6921e]/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#307e3e]"
+              className="inline-flex items-center gap-2 px-5.5 py-2.5 rounded-xl text-sm font-bold text-white bg-[#307e3e] hover:bg-[#246330] shadow-md shadow-[#307e3e]/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#307e3e]"
             >
               <span>Let's Talk</span>
               <ArrowRight className="w-4 h-4" />
@@ -115,7 +115,7 @@ export const Navbar: React.FC = () => {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between px-4 py-3 rounded-lg text-base font-semibold transition-colors ${isActive
-                    ? 'bg-[#307e3e]/10 text-[#307e3e] border border-[#307e3e]/30 font-bold'
+                    ? 'bg-[#307e3e]/10 text-[#307e3e] border border-[#f6921e]/40 font-bold'
                     : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
                     }`}
                 >
@@ -129,7 +129,7 @@ export const Navbar: React.FC = () => {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-base font-bold text-white bg-gradient-to-r from-[#f6921e] to-[#307e3e] hover:from-[#d8790c] hover:to-[#246330] shadow-md shadow-[#f6921e]/20 transition-all"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-base font-bold text-white bg-[#307e3e] hover:bg-[#246330] shadow-md shadow-[#307e3e]/20 transition-all"
             >
               <span>Let's Talk</span>
               <ArrowRight className="w-5 h-5" />

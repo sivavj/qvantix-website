@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SERVICES, Service } from '@/data/qvantixData';
 import { ArrowRight, CheckCircle2, ChevronRight, Cpu, ShieldCheck } from 'lucide-react';
 
@@ -17,7 +18,7 @@ export const ServicesSection: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#307e3e] font-mono">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono">
               SOLUTIONS & SERVICES
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -30,7 +31,7 @@ export const ServicesSection: React.FC = () => {
           <div>
             <Link
               href="/solutions"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border-2 border-[#f6921e] text-[#d8790c] hover:bg-[#f6921e]/10 text-sm font-bold shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border-2 border-[#f6921e] text-[#f6921e] hover:bg-[#f6921e]/10 text-sm font-bold shadow-sm transition-all"
             >
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4" />
@@ -59,7 +60,7 @@ export const ServicesSection: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <span
                       className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
-                        isSelected ? 'bg-gradient-to-r from-[#f6921e] to-[#307e3e] text-white' : 'bg-slate-200 text-slate-700'
+                        isSelected ? 'bg-[#307e3e] text-white' : 'bg-slate-200 text-slate-700'
                       }`}
                     >
                       0{idx + 1}
@@ -78,23 +79,35 @@ export const ServicesSection: React.FC = () => {
 
           {/* Right Selected Solution Detailed View (7 Cols) */}
           <div className="lg:col-span-7">
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg space-y-6">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-lg space-y-6 hover:border-[#f6921e]">
               
-              <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#307e3e] bg-[#307e3e]/10 px-3 py-1 rounded-full border border-[#307e3e]/30">
-                  {activeService.category}
-                </span>
-                <span className="text-xs font-mono text-slate-400">QVANTIX SOLUTION DETAILED</span>
+              {/* Solution Banner Image */}
+              <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-200 shadow-md">
+                <Image
+                  src={activeService.image}
+                  alt={activeService.title}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end p-4">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#f6921e] bg-slate-900/90 px-3 py-1 rounded-md border border-[#f6921e]/40 backdrop-blur-md">
+                    {activeService.category}
+                  </span>
+                </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-extrabold text-slate-900 mb-2">
+              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                <h3 className="text-2xl font-extrabold text-slate-900">
                   {activeService.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  {activeService.fullDescription}
-                </p>
+                <span className="text-xs font-mono text-slate-400 font-medium">QVANTIX SOLUTION DETAILED</span>
               </div>
+
+              <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                {activeService.fullDescription}
+              </p>
 
               {/* Capabilities List */}
               <div className="space-y-3 pt-2">
@@ -120,7 +133,7 @@ export const ServicesSection: React.FC = () => {
                   {activeService.technologies.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 rounded-lg bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex items-center gap-1.5"
+                      className="px-3 py-1 rounded-lg bg-[#307e3e]/10 border border-[#307e3e]/30 text-xs font-mono text-[#307e3e] flex items-center gap-1.5 font-bold"
                     >
                       <Cpu className="w-3.5 h-3.5 text-[#307e3e]" />
                       <span>{t}</span>
@@ -144,7 +157,7 @@ export const ServicesSection: React.FC = () => {
               <div className="pt-4 border-t border-slate-100 flex justify-end">
                 <Link
                   href={`/solutions/${activeService.slug}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#307e3e] to-[#246330] hover:from-[#246330] hover:to-[#1e5229] shadow-md shadow-[#307e3e]/20 text-sm transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#307e3e] hover:bg-[#246330] shadow-md shadow-[#307e3e]/20 text-sm transition-all"
                 >
                   <span>Explore {activeService.title}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -157,36 +170,46 @@ export const ServicesSection: React.FC = () => {
         </div>
 
         {/* Mobile Accordion View (Visible on Mobile/Tablet) */}
-        <div className="lg:hidden space-y-4">
+        <div className="lg:hidden space-y-6">
           {SERVICES.map((service, idx) => (
-            <div key={service.id} className="bg-white border border-slate-200 rounded-xl p-6 space-y-4 shadow-sm">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono font-bold text-[#d8790c] bg-[#f6921e]/10 px-2.5 py-1 rounded border border-[#f6921e]/30">
-                  0{idx + 1}
-                </span>
-                <span className="text-xs font-mono text-slate-500">{service.category}</span>
+            <div key={service.id} className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:border-[#f6921e]">
+              
+              {/* Solution Card Banner Image */}
+              <div className="relative aspect-[16/9] w-full bg-slate-900">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute top-3 left-3 bg-slate-900/90 text-[#f6921e] border border-[#f6921e]/40 text-[10px] font-mono font-bold px-2.5 py-1 rounded-md backdrop-blur-md">
+                  0{idx + 1} &bull; {service.category}
+                </div>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-              <p className="text-slate-600 text-sm">{service.shortDescription}</p>
+              <div className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+                <p className="text-slate-600 text-sm font-medium leading-relaxed">{service.shortDescription}</p>
 
-              <div className="space-y-1.5 pt-2">
-                {service.capabilities.slice(0, 3).map((cap, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#307e3e] shrink-0" />
-                    <span>{cap}</span>
-                  </div>
-                ))}
-              </div>
+                <div className="space-y-1.5 pt-2">
+                  {service.capabilities.slice(0, 3).map((cap, i) => (
+                    <div key={i} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#307e3e] shrink-0" />
+                      <span>{cap}</span>
+                    </div>
+                  ))}
+                </div>
 
-              <div className="pt-3">
-                <Link
-                  href={`/solutions/${service.slug}`}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#f6921e] hover:text-[#d8790c]"
-                >
-                  <span>Explore Solution</span>
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
+                <div className="pt-3 border-t border-slate-100 flex justify-end">
+                  <Link
+                    href={`/solutions/${service.slug}`}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#307e3e] text-white text-xs font-bold hover:bg-[#246330] transition-colors shadow-sm"
+                  >
+                    <span>Explore Solution</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

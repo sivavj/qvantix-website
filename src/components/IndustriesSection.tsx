@@ -17,14 +17,14 @@ export const IndustriesSection: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
               Built for the way different industries work.
             </h2>
-            <p className="text-slate-600 text-base">
+            <p className="text-slate-600 text-base font-medium">
               Custom software, web engineering, and search optimization tailored to high-growth sectors.
             </p>
           </div>
           <div>
             <Link
               href="/industries"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border-2 border-[#f6921e] text-[#d8790c] hover:bg-[#f6921e]/10 text-sm font-bold transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border-2 border-[#f6921e] text-[#f6921e] hover:bg-[#f6921e]/10 text-sm font-bold transition-all shadow-sm"
             >
               <span>Explore All Industries</span>
               <ArrowRight className="w-4 h-4" />
@@ -34,18 +34,14 @@ export const IndustriesSection: React.FC = () => {
 
         {/* Industry Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {INDUSTRIES.map((ind, indIdx) => (
+          {INDUSTRIES.map((ind) => (
             <div
               key={ind.id}
-              className="light-card light-card-hover rounded-2xl p-7 flex flex-col justify-between space-y-6 group"
+              className="light-card light-card-hover rounded-2xl p-7 flex flex-col justify-between space-y-6 group hover:border-[#f6921e]"
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 ${
-                    indIdx % 2 === 0
-                      ? 'bg-[#307e3e]/10 border-[#307e3e]/30 text-[#307e3e]'
-                      : 'bg-[#f6921e]/10 border-[#f6921e]/30 text-[#f6921e]'
-                  }`}>
+                  <div className="w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 bg-[#307e3e]/10 border-[#307e3e]/30 text-[#307e3e]">
                     <Building2 className="w-5 h-5" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#307e3e] transition-colors">
@@ -65,9 +61,7 @@ export const IndustriesSection: React.FC = () => {
 
                 {/* Qvantix Capability */}
                 <div className="space-y-1.5">
-                  <span className={`text-[10px] font-mono font-bold uppercase tracking-wider block ${
-                    indIdx % 2 === 0 ? 'text-[#307e3e]' : 'text-[#d8790c]'
-                  }`}>
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider block text-[#307e3e]">
                     QVANTIX CAPABILITY
                   </span>
                   <p className="text-xs text-slate-900 font-semibold leading-relaxed">
@@ -78,10 +72,8 @@ export const IndustriesSection: React.FC = () => {
                 {/* Delivered Solutions */}
                 <div className="space-y-1.5 pt-2">
                   {ind.keySolutions.map((sol, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-slate-600">
-                      <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 ${
-                        indIdx % 2 === 0 ? 'text-[#307e3e]' : 'text-[#f6921e]'
-                      }`} />
+                    <div key={idx} className="flex items-center gap-2 text-xs text-slate-600 font-medium">
+                      <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-[#307e3e]" />
                       <span>{sol}</span>
                     </div>
                   ))}
@@ -91,7 +83,7 @@ export const IndustriesSection: React.FC = () => {
               <div className="pt-4 border-t border-slate-100">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f6921e] hover:text-[#d8790c] group-hover:translate-x-1 transition-transform"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#307e3e] hover:text-[#246330] group-hover:translate-x-1 transition-transform"
                 >
                   <span>Explore Solutions</span>
                   <ChevronRight className="w-4 h-4" />

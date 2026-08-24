@@ -50,7 +50,7 @@ export const VisualShowcaseSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             Designed for impact. Engineered for growth.
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg font-medium">
             Explore how Qvantix combines software engineering, artificial intelligence, and digital growth into practical visual solutions.
           </p>
         </div>
@@ -72,7 +72,7 @@ export const VisualShowcaseSection: React.FC = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#f6921e]/30 text-[10px] font-mono font-bold text-[#d8790c]">
+                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#f6921e]/30 text-[10px] font-mono font-bold text-[#f6921e]">
                     {item.category}
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export const VisualShowcaseSection: React.FC = () => {
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-[11px] font-mono text-slate-700 font-semibold"
+                        className="px-2.5 py-1 rounded-md bg-[#307e3e]/10 border border-[#307e3e]/30 text-[11px] font-mono text-[#307e3e] font-bold"
                       >
                         {tag}
                       </span>
@@ -105,7 +105,7 @@ export const VisualShowcaseSection: React.FC = () => {
               <div className="p-6 pt-0 border-t border-slate-100/50 mt-4">
                 <Link
                   href={item.link}
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#f6921e] hover:text-[#d8790c] transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#307e3e] hover:text-[#246330] transition-colors group/link"
                 >
                   <span>Explore {item.title}</span>
                   <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />

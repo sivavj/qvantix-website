@@ -53,26 +53,24 @@ export const ProcessSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             From idea to implementation.
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg font-medium">
             A structured, 5-step delivery timeline ensuring clarity, quality, and on-time execution.
           </p>
         </div>
 
         {/* 5-Step Process Timeline */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative">
-          {PROCESS_STEPS_5.map((step, idx) => (
+          {PROCESS_STEPS_5.map((step) => (
             <div
               key={step.number}
-              className={`light-card light-card-hover rounded-2xl p-6 flex flex-col justify-between space-y-4 relative border-t-4 ${
-                idx % 2 === 0 ? 'border-t-[#307e3e]' : 'border-t-[#f6921e]'
-              }`}
+              className="light-card light-card-hover rounded-2xl p-6 flex flex-col justify-between space-y-4 relative border-t-4 border-t-[#f6921e] hover:border-[#f6921e]"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="w-8 h-8 rounded-full bg-[#307e3e] text-white font-mono font-bold text-xs flex items-center justify-center shadow-sm">
                     {step.number}
                   </span>
-                  <span className="text-[11px] font-mono font-semibold text-slate-500">
+                  <span className="text-[11px] font-mono font-bold text-[#307e3e]">
                     PHASE {step.number}
                   </span>
                 </div>
@@ -81,28 +79,24 @@ export const ProcessSection: React.FC = () => {
                   {step.title}
                 </h3>
 
-                <p className={`text-xs font-semibold font-mono ${
-                  idx % 2 === 0 ? 'text-[#307e3e]' : 'text-[#f6921e]'
-                }`}>
+                <p className="text-xs font-bold font-mono text-[#307e3e]">
                   {step.subtitle}
                 </p>
 
-                <p className="text-slate-600 text-xs leading-relaxed">
+                <p className="text-slate-600 text-xs leading-relaxed font-medium">
                   {step.description}
                 </p>
               </div>
 
               {/* Deliverables */}
               <div className="pt-4 border-t border-slate-100 space-y-2">
-                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">
+                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block font-bold">
                   Key Deliverables:
                 </span>
                 <div className="space-y-1">
                   {step.deliverables.map((del, i) => (
                     <div key={i} className="flex items-center gap-1.5 text-[11px] text-slate-700 font-medium">
-                      <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 ${
-                        idx % 2 === 0 ? 'text-[#307e3e]' : 'text-[#f6921e]'
-                      }`} />
+                      <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-[#307e3e]" />
                       <span>{del}</span>
                     </div>
                   ))}

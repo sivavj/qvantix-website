@@ -43,27 +43,27 @@ export const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/" className="text-slate-400 hover:text-[#307e3e] transition-colors">
+                <Link href="/" className="text-slate-400 hover:text-[#f6921e] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-400 hover:text-[#307e3e] transition-colors">
+                <Link href="/about" className="text-slate-400 hover:text-[#f6921e] transition-colors">
                   About Qvantix
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="text-slate-400 hover:text-[#307e3e] transition-colors">
+                <Link href="/solutions" className="text-slate-400 hover:text-[#f6921e] transition-colors">
                   Solutions & Services
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-slate-400 hover:text-[#307e3e] transition-colors">
+                <Link href="/industries" className="text-slate-400 hover:text-[#f6921e] transition-colors">
                   Industries Served
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-400 hover:text-[#307e3e] transition-colors">
+                <Link href="/contact" className="text-slate-400 hover:text-[#f6921e] transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -108,10 +108,10 @@ export const Footer: React.FC = () => {
                 <span>{COMPANY_INFO.contactPlaceholder.location}</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#f6921e] shrink-0" />
+                <Mail className="w-4 h-4 text-[#307e3e] shrink-0" />
                 <a
                   href={`mailto:${COMPANY_INFO.contactPlaceholder.email}`}
-                  className="font-mono text-xs text-slate-300 hover:text-[#f6921e] transition-colors"
+                  className="font-mono text-xs text-slate-300 hover:text-[#307e3e] transition-colors"
                 >
                   {COMPANY_INFO.contactPlaceholder.email}
                 </a>
@@ -129,7 +129,7 @@ export const Footer: React.FC = () => {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-bold px-4.5 py-2.5 rounded-xl bg-gradient-to-r from-[#f6921e] to-[#307e3e] hover:from-[#d8790c] hover:to-[#246330] text-white shadow transition-all"
+                className="inline-flex items-center gap-2 text-xs font-bold px-4.5 py-2.5 rounded-xl bg-[#307e3e] hover:bg-[#246330] text-white shadow transition-all"
               >
                 <span>Start a Conversation</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -150,7 +150,7 @@ export const Footer: React.FC = () => {
               Terms & Conditions
             </Link>
             <span className="flex items-center gap-1 text-slate-300 font-medium">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" /> Enterprise IT Security
+              <ShieldCheck className="w-4 h-4 text-[#307e3e]" /> Enterprise IT Security
             </span>
           </div>
         </div>

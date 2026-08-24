@@ -6,6 +6,7 @@ export interface Service {
   tagline: string;
   shortDescription: string;
   fullDescription: string;
+  image: string;
   capabilities: string[];
   businessBenefits: string[];
   technologies: string[];
@@ -87,6 +88,7 @@ export const SERVICES: Service[] = [
     tagline: 'Bespoke software and business solutions built to automate operations and drive efficiency.',
     shortDescription: 'Practical, reliable custom software tailored to the exact way your business operates in Tamil Nadu.',
     fullDescription: 'At Qvantix Digital & Software Solutions in Tamil Nadu, we turn business ideas into practical digital solutions built for real-world needs. We build custom software platforms, internal enterprise tools, ERPs, CRMs, and management portals that streamline day-to-day operations and prepare your company for scalable growth.',
+    image: '/assets/solutions/Custom Software Development.png',
     capabilities: [
       'Bespoke Business Management Systems & ERPs',
       'Custom CRM & Internal Portal Development',
@@ -121,6 +123,7 @@ export const SERVICES: Service[] = [
     tagline: 'Custom-built, responsive websites designed to enhance online presence and support business growth.',
     shortDescription: 'Modern business websites engineered for speed, clean UX, SEO, and customer conversion.',
     fullDescription: 'Your website is the digital front door to your company. Qvantix builds custom, lightning-fast, visually compelling, and SEO-optimized business websites in Tamil Nadu that communicate your positioning with clarity and turn visitors into qualified business leads.',
+    image: '/assets/solutions/website development.png',
     capabilities: [
       'Business Website Development',
       'Corporate Website Development',
@@ -155,6 +158,7 @@ export const SERVICES: Service[] = [
     tagline: 'Innovative Android and iOS applications crafted for seamless user experiences and powerful functionality.',
     shortDescription: 'Cross-platform native-feel mobile applications that engage users and streamline business operations.',
     fullDescription: 'Deliver a powerful brand experience directly to your customers\' smartphones. Qvantix designs and builds high-performing mobile applications for iOS and Android, focusing on intuitive interfaces, fast response times, and robust offline-online synchronization.',
+    image: '/assets/solutions/Mobile App.png',
     capabilities: [
       'Android App Development',
       'iOS App Development',
@@ -185,6 +189,7 @@ export const SERVICES: Service[] = [
     tagline: 'Comprehensive testing services focused on performance, reliability, security, and user satisfaction.',
     shortDescription: 'Comprehensive manual and automated testing to ensure your software performs flawlessly.',
     fullDescription: 'Software flaws hurt client trust and cost money. Qvantix provides rigorous Quality Assurance & Software Testing services in Tamil Nadu to validate your software architecture across functional testing, performance benchmarks, security compliance, and user interface responsiveness before release.',
+    image: '/assets/solutions/Software Testing.png',
     capabilities: [
       'Manual Testing',
       'Automation Testing',
@@ -216,6 +221,7 @@ export const SERVICES: Service[] = [
     tagline: 'Data-driven marketing strategies including search optimization, social media, online advertising, and brand promotion.',
     shortDescription: 'Strategic digital marketing uniting SEO, PPC, content, email, and social media campaigns.',
     fullDescription: 'Build a commanding digital presence across online touchpoints. Qvantix creates holistic digital marketing strategies combining channel distribution, social presence management, targeted ad campaigns, content marketing, and brand messaging to help your company engage audiences and accelerate digital growth in Tamil Nadu and beyond.',
+    image: '/assets/solutions/Digital Marketing.png',
     capabilities: [
       'Search Engine Optimization (SEO)',
       'PPC Advertising & Google Ads',
@@ -249,6 +255,7 @@ export const SERVICES: Service[] = [
     tagline: 'Smart technology solutions that automate processes, uncover insights, and improve business efficiency.',
     shortDescription: 'Smart automation, predictive data analysis, document AI, and intelligent assistant workflows.',
     fullDescription: 'Integrate artificial intelligence into your operational core. Qvantix delivers pragmatic AI & Machine Learning solutions in Tamil Nadu—including AI chatbots, document processing, natural language assistants, predictive analytics, and process automation—to help your business run smarter.',
+    image: '/assets/solutions/AI & ML.png',
     capabilities: [
       'AI Chatbots',
       'Machine Learning Models',
@@ -284,6 +291,7 @@ export const SERVICES: Service[] = [
     tagline: 'Visually compelling designs and cohesive logos that strengthen brand communication and create lasting impressions.',
     shortDescription: 'Memorable brand identity, distinctive logo designs, and visual marketing collateral.',
     fullDescription: 'Your visual identity shapes how clients perceive your technical credibility. Qvantix crafts distinctive logo designs, visual guidelines, typography systems, social media templates, and corporate marketing materials in Tamil Nadu that build authority and leave a lasting visual impression.',
+    image: '/assets/solutions/Graphic Design.png',
     capabilities: [
       'Logo Design',
       'Brand Identity Design',
@@ -319,6 +327,7 @@ export const SERVICES: Service[] = [
     tagline: 'Dynamic visual storytelling through animations and motion content designed to increase audience engagement.',
     shortDescription: 'Engaging visual storytelling videos that explain complex technology products with clarity.',
     fullDescription: 'Complex software and digital solutions are best explained with dynamic visuals. Qvantix produces professional motion graphics, 2D character animations, product explainer videos, kinetic typography, and logo animations in Tamil Nadu that simplify abstract technical concepts and capture audience attention.',
+    image: '/assets/solutions/Motion Graphic & 2d animation.png',
     capabilities: [
       'Motion Graphics',
       '2D Character Animation',
@@ -354,6 +363,7 @@ export const SERVICES: Service[] = [
     tagline: 'AI-powered video creation, avatar generation, text-to-video, and dynamic automated video production.',
     shortDescription: 'Cutting-edge AI video creation, text-to-video, AI avatars, voiceovers, and automated video production.',
     fullDescription: 'Transform how your business produces visual content. Qvantix delivers AI Video creation solutions in Tamil Nadu—including text-to-video, AI avatar creation, automated voiceovers, multilingual videos, and AI reels—to help brands produce high-converting corporate, promotional, and educational videos at scale.',
+    image: '/assets/solutions/AI Video.png',
     capabilities: [
       'AI Video Creation',
       'Text-to-Video',
@@ -390,6 +400,7 @@ export const SERVICES: Service[] = [
     tagline: 'Data-driven technical and content SEO designed to rank your business for high-intent search terms.',
     shortDescription: 'Organic search strategies that build sustainable search rankings and qualified inbound leads.',
     fullDescription: 'Capture customers when they are actively searching for your solutions. Qvantix delivers comprehensive Search Engine Optimization—combining technical web optimization, targeted keyword architecture, quality content creation, and search indexing to increase your digital visibility in Tamil Nadu and global markets.',
+    image: '/assets/solutions/SEO.png',
     capabilities: [
       'Comprehensive Technical SEO Audits & Architecture Fixes',
       'High-Intent Keyword Research & Mapping',

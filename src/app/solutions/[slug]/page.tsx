@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { SERVICES } from '@/data/qvantixData';
 import { CheckCircle2, ArrowRight, ShieldCheck, Cpu } from 'lucide-react';
@@ -66,7 +67,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* Header */}
       <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f6921e]/10 border border-[#f6921e]/30 text-[#f6921e] text-xs font-mono font-bold">
             <span>{service.category}</span>
           </div>
@@ -75,11 +76,24 @@ export default async function ServiceDetailPage({ params }: Props) {
             {service.title}
           </h1>
 
-          <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed font-medium">
             {service.tagline}
           </p>
 
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+          {/* Solution Banner Image */}
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full rounded-2xl overflow-hidden bg-slate-900 shadow-xl border border-slate-200">
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              priority
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+          </div>
+
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white bg-[#307e3e] hover:bg-[#246330] shadow-md shadow-[#307e3e]/20 transition-all text-sm"
@@ -141,7 +155,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {service.technologies.map((tech) => (
-                    <span key={tech} className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-mono text-slate-800 flex items-center gap-1.5 font-medium shadow-xs">
+                    <span key={tech} className="px-3 py-1.5 rounded-lg bg-[#307e3e]/10 border border-[#307e3e]/30 text-xs font-mono text-[#307e3e] flex items-center gap-1.5 font-bold shadow-xs">
                       <Cpu className="w-3.5 h-3.5 text-[#307e3e]" />
                       <span>{tech}</span>
                     </span>

@@ -47,7 +47,7 @@ export const ProblemSolutionSection: React.FC = () => {
             Technology should solve business problems —{' '}
             <span className="text-[#307e3e]">not create more of them.</span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg font-medium">
             Many companies struggle with bloated software, disconnected vendors, or websites that fail to convert visitors into inquiries. Qvantix bridges technology and business growth.
           </p>
         </div>
@@ -57,11 +57,11 @@ export const ProblemSolutionSection: React.FC = () => {
           {BUSINESS_PROBLEMS.map((item) => (
             <div
               key={item.id}
-              className="light-card light-card-hover rounded-2xl p-7 sm:p-8 flex flex-col justify-between space-y-6"
+              className="light-card light-card-hover rounded-2xl p-7 sm:p-8 flex flex-col justify-between space-y-6 hover:border-[#f6921e]"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest px-2.5 py-1 rounded border text-[#d8790c] bg-[#f6921e]/10 border-[#f6921e]/30">
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest px-2.5 py-1 rounded border text-[#f6921e] bg-[#f6921e]/10 border-[#f6921e]/30">
                     {item.title}
                   </span>
                   <AlertTriangle className="w-5 h-5 text-[#f6921e]" />
@@ -71,7 +71,7 @@ export const ProblemSolutionSection: React.FC = () => {
                   {item.problem}
                 </h3>
 
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed font-medium">
                   {item.impact}
                 </p>
 

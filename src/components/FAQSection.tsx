@@ -34,7 +34,7 @@ export const FAQSection: React.FC<FAQProps> = ({
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {title}
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg font-medium">
             {subtitle}
           </p>
         </div>
@@ -53,7 +53,7 @@ export const FAQSection: React.FC<FAQProps> = ({
                 <button
                   type="button"
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-[#307e3e] rounded-2xl"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-[#f6921e] rounded-2xl"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3">

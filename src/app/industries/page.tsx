@@ -33,7 +33,7 @@ export default function IndustriesPage() {
 
         {/* Text Overlay */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono px-4 py-1.5 rounded-full bg-slate-900/80 border border-[#f6921e]/50 backdrop-blur-md inline-block shadow-lg">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#f6921e] font-mono px-4 py-1.5 rounded-full bg-slate-900/90 border border-[#f6921e]/50 backdrop-blur-md inline-block shadow-lg">
             SECTOR CAPABILITIES
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-md">
@@ -50,18 +50,14 @@ export default function IndustriesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {INDUSTRIES.map((ind, indIdx) => (
+            {INDUSTRIES.map((ind) => (
               <div
                 key={ind.id}
-                className="light-card light-card-hover rounded-2xl p-8 space-y-6 flex flex-col justify-between"
+                className="light-card light-card-hover rounded-2xl p-8 space-y-6 flex flex-col justify-between hover:border-[#307e3e]"
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center ${
-                      indIdx % 2 === 0
-                        ? 'bg-emerald-50 border-emerald-200 text-emerald-700'
-                        : 'bg-orange-50 border-orange-200 text-orange-600'
-                    }`}>
+                    <div className="w-12 h-12 rounded-xl border flex items-center justify-center bg-[#307e3e]/10 border-[#307e3e]/30 text-[#307e3e]">
                       <Building2 className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900">{ind.name}</h2>
@@ -77,12 +73,10 @@ export default function IndustriesPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <span className={`text-xs font-mono font-bold uppercase tracking-wider block ${
-                      indIdx % 2 === 0 ? 'text-emerald-800' : 'text-orange-700'
-                    }`}>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider block text-[#307e3e]">
                       Qvantix Capability
                     </span>
-                    <p className="text-sm text-slate-900 font-semibold">
+                    <p className="text-sm text-slate-900 font-semibold leading-relaxed">
                       {ind.qvantixCapability}
                     </p>
                   </div>
@@ -92,10 +86,8 @@ export default function IndustriesPage() {
                       Delivered Solutions:
                     </span>
                     {ind.keySolutions.map((sol, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-slate-700">
-                        <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 ${
-                          indIdx % 2 === 0 ? 'text-emerald-700' : 'text-orange-600'
-                        }`} />
+                      <div key={i} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-[#307e3e]" />
                         <span>{sol}</span>
                       </div>
                     ))}
@@ -105,7 +97,7 @@ export default function IndustriesPage() {
                 <div className="pt-6 border-t border-slate-100">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center w-full gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 hover:from-orange-600 hover:to-emerald-700 text-white font-bold text-xs shadow transition-all"
+                    className="inline-flex items-center justify-center w-full gap-2 py-3 px-4 rounded-xl bg-[#307e3e] hover:bg-[#246330] text-white font-bold text-xs shadow transition-all"
                   >
                     <span>Discuss {ind.name} Project</span>
                     <ArrowRight className="w-4 h-4" />
